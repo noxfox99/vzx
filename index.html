@@ -56,15 +56,26 @@
              text-shadow: 4px 6px 4px rgba(0, 0, 0, 0.5);
 
         }
+        
+
         .sidebar {
             width: 200px;
             background-color: transparent;
             padding: 10px;
+            background: linear-gradient(135deg, rgba(128, 0, 128, 0.7), rgba(0, 0, 128, 0.7)); /* Gradient from purple to deep blue */
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+            box-sizing: border-box; /* Include padding in width and height */
+            color: white; /* Text color */
+            overflow-y: auto; /* Scroll if content overflows */
+            z-index: 1000; /* Ensure it stays on top */
+            border: 2px solid rgba(128, 0, 128, 0.8);
         }
         .content {
             flex-grow: 1;
             padding: 20px;
             background-color: #transparent; /* Set content background color to white */
+
         }
         .link {
             display: block;
@@ -100,6 +111,7 @@
     text-align: center;
     padding-left: 20px;
     padding-top: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for depth */
   }
 
 
@@ -254,6 +266,10 @@
   display: block;
   width: 50px; /* Adjust size as needed */
   height: 50px; /* Adjust size as needed */
+
+}
+.animated-button button:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for depth */;
 }
 
 .animated-button.move-in {
