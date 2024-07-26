@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santa Muerta Shop</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('back1.png') center top; /* Set background color to orange */
+                    background-position: center top;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-color: black;
+        }
+
+        .cyberpunk-div {
+            background: linear-gradient(135deg, #ff00ff, #00ffff, #ff00ff);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            color: #fff;
+            text-align: center;
+            line-height: 20px; /* Center text vertically */
+        }
+        .cyberpunk-button {
+            background: linear-gradient(135deg, #ff00ff, #00ffff, #ff00ff);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 10px;
+        }
+
+        .cyberpunk-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 { font-size: 3em !important;
+             text-align: center;
+             margin: 0 auto;
+             color: white;
+             text-shadow: 4px 6px 4px rgba(0, 0, 0, 0.5);
+
+        }
+        .sidebar {
+            width: 200px;
+            background-color: transparent;
+            padding: 10px;
+        }
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+            background-color: #transparent; /* Set content background color to white */
+        }
+        .link {
+            display: block;
+            margin-bottom: 10px;
+            text-decoration: none;
+            color: #fff;
+        }
+        @media screen and (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+
+        .image-button {
+    display: inline-block;
+    padding: 0;
+    width: 150px; /* Adjust width as needed */
+    height: 55px; /* Adjust height as needed */
+    background-color: transparent;
+    background-image: url('group68.png'); /* Replace with your image path */
+    background-size: cover; /* Scale the background image to cover the entire button */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    border: none; /* Remove border */
+    overflow: hidden; /* Hide overflow */
+    cursor: pointer; /* Show pointer cursor on hover */
+        width: 100%;
+    color: white;
+    font-style: bold;
+    text-align: center;
+    padding-left: 20px;
+    padding-top: 15px;
+  }
+
+
+     .image-button-opera {
+    display: inline-block;
+    padding: 0;
+    width: 150px; /* Adjust width as needed */
+    height: 65px; /* Adjust height as needed */
+    background-color: transparent;
+    background-image: url('group89.png'); /* Replace with your image path */
+    background-size: cover; /* Scale the background image to cover the entire button */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    border: none; /* Remove border */
+    overflow: hidden; /* Hide overflow */
+    cursor: pointer; /* Show pointer cursor on hover */
+        width: 100%;
+    color: white;
+    font-style: bold;
+    text-align: center;
+    padding-left: 20px;
+    padding-top: 15px;
+  }
+
+  .image-button-fox {
+    display: inline-block;
+    padding: 0;
+    width: 150px; /* Adjust width as needed */
+    height: 65px; /* Adjust height as needed */
+    background-color: transparent;
+    background-image: url('group90.png'); /* Replace with your image path */
+    background-size: cover; /* Scale the background image to cover the entire button */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    border: none; /* Remove border */
+    overflow: hidden; /* Hide overflow */
+    cursor: pointer; /* Show pointer cursor on hover */
+        width: 100%;
+    color: white;
+    font-style: bold;
+    text-align: center;
+    padding-left: 20px;
+    padding-top: 15px;
+  }
+
+  .image-button-brave {
+    display: inline-block;
+    padding: 0;
+    width: 150px; /* Adjust width as needed */
+    height: 65px; /* Adjust height as needed */
+    background-color: transparent;
+    background-image: url('group79.png'); /* Replace with your image path */
+    background-size: cover; /* Scale the background image to cover the entire button */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    border: none; /* Remove border */
+    overflow: hidden; /* Hide overflow */
+    cursor: pointer; /* Show pointer cursor on hover */
+        width: 100%;
+    color: white;
+    font-style: bold;
+    text-align: center;
+    padding-left: 20px;
+    padding-top: 15px;
+  }
+
+    .image-button-chrome {
+    display: inline-block;
+    padding: 0;
+    width: 150px; /* Adjust width as needed */
+    height: 65px; /* Adjust height as needed */
+    background-color: transparent;
+    background-image: url('group88.png'); /* Replace with your image path */
+    background-size: cover; /* Scale the background image to cover the entire button */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    border: none; /* Remove border */
+    overflow: hidden; /* Hide overflow */
+    cursor: pointer; /* Show pointer cursor on hover */
+        width: 100%;
+    color: white;
+    font-style: bold;
+    text-align: center;
+    padding-left: 20px;
+    padding-top: 15px;
+  }
+.animated-button {
+  margin: 5px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+  transform: translateY(100%);
+}
+
+.animated-button img {
+  display: block;
+  width: 50px; /* Adjust size as needed */
+  height: 50px; /* Adjust size as needed */
+}
+
+.animated-button.move-in {
+  transform: translateY(0);
+}
+
+/* Animation delay */
+.animated-button:nth-child(1) {
+  animation: move-up 0.5s ease 5s forwards;
+}
+
+.animated-button:nth-child(2) {
+  animation: move-up 0.5s ease 5.5s forwards;
+}
+
+.animated-button:nth-child(3) {
+  animation: move-up 0.5s ease 6s forwards;
+}
+
+@keyframes move-up {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+    </style>
+    <script>
+// JavaScript to show the button after 3 seconds
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+        document.querySelector('.image-button').style.display = 'inline-block';
+    }, 3000); // 3000 milliseconds = 3 seconds
+});
+</script>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar" style="margin-top: 30px;">
+            <h2></h2>
+            <div class="button-container">
+    <a href="https://t.me/+88801795264" target="_blank" style="width:100%"><button style="width:100%" class="image-button animated-button">Оператор Кавказ</button></a> 
+    <a href="https://t.me/SANTAMUR_KBR_BOT" target="_blank" style="width:100%"><button style="width:100%" class="image-button animated-button">Бот Кавказ</button></a> 
+    <a href="https://t.me/+meOnBmuAMsg3MjUx" target="_blank" style="width:100%"><button style="width:100%" class="image-button animated-button">Канал Кавказ</button></a> 
+    <a href="https://t.me/STMsupp" target="_blank" style="width:100%"><button style="width:100%" class="image-button animated-button">Оператор центр/Юг</button></a> 
+    <a href="https://t.me/MRT_Kras_kray_bot" target="_blank" style="width:100%"><button style="width:100%" class="image-button animated-button">Бот центр/Юг</button></a>
+    <a href="https://t.me/+ggE9_-uc-Og3ZTlk" target="_blank" style="width:100%"><button style="width:100%" class="image-button animated-button">Чат центр/Юг</button></a> 
+    <a href="https://t.me/+zZAgnlFdLJJiYmRk" target="_blank" style="width:100%"><button style="width:100%" class="image-button animated-button">Канал цент/Юг</button></a>
+    <a href="https://t.me/Santa_Muerte_W0rk" target="_blank" style="width:100%"><button style="width:100%" class="image-button animated-button">Работа с нами</button></a>
+</div>
+        </div>
+        <div class="content">
+            <h1 style="text-indent: -99999px;">Santa Muerte Shop</h1>
+            <h1 style="text-indent: -99999px;">STM24.CRYPTO</h1>
+        </div>
+        <div class="sidebar" style="margin-top:30px;">
+        
+
+
+ <div class="button-container">
+    <a href="" target="_blank" style="width:100%"><button style="width:100%" class="image-button-opera animated-button"></button></a>
+    <a href="" target="_blank" style="width:100%"><button style="width:100%" class="image-button-brave animated-button"></button></a>
+    <a href="" target="_blank" style="width:100%"><button style="width:100%" class="image-button-fox animated-button"></button></a> 
+    <a href="" target="_blank" style="width:100%"><button style="width:100%" class="image-button-chrome animated-button"></button></a> 
+</div>
+
+
+            
+
+
+        </div>
+    </div>
+</body>
+</html>
